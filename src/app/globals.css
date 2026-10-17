@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-slate-800 antialiased; }
+  h1, h2, h3, h4 { @apply font-display; }
+  :focus-visible { outline: 2px solid #14a589; outline-offset: 2px; }
+}
+
+@layer utilities {
+  .container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section { @apply py-16 sm:py-20; }
+  .gradient-hero { background: radial-gradient(1200px 500px at 85% -10%, rgba(45,189,161,.22), transparent 60%), radial-gradient(900px 500px at -10% 20%, rgba(255,171,36,.12), transparent 55%), linear-gradient(180deg, #f5f8fd 0%, #ffffff 100%); }
+  .gradient-navy { background: linear-gradient(135deg, #07132e 0%, #12295a 55%, #0d6a5b 130%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
